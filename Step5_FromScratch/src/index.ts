@@ -1,1 +1,3 @@
-console.log('pouet');
+import { notDead } from './deadcode';
+
+notDead();
