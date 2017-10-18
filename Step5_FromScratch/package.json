@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./build/dist/index.js",
-    "build": "tsc",
+    "es5": "node ./build_es5/dist/index.js",
+    "es6": "node --harmony --es_staging ./build_es6/dist/index.js",
+    "build": "tsc -p tsconfig.es5.json && tsc -p tsconfig.es6.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
