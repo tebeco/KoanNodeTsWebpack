@@ -4,15 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "es5": "node ./build_es5/dist/index.js",
-    "es6": "node --harmony --es_staging ./build_es6/dist/index.js",
-    "build": "tsc -p tsconfig.es5.json && tsc -p tsconfig.es6.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "es5": "node ./build/dist_es5/index.js",
+    "es6": "node  --harmony --es_staging ./build/dist_es6/index.mjs",
+    "esnext": "node --harmony --es_staging --future ./build_esnext/dist/index.js",
+
+    "clean": "rimraf build",
+    "build": "npm run clean && tsc -p tsconfig.es5.json && tsc -p tsconfig.es6.json  && tsc -p tsconfig.esnext.json"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^8.0.34",
+    "rimraf": "^2.6.2",
     "typescript": "^2.5.3"
   }
 }
