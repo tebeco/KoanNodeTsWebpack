@@ -1,20 +1,21 @@
 {
-  "name": "webpack-from-nothing",
+  "name": "understanding-typescript",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "es5": "node ./build/dist_es5/index.js",
-    "es6": "node  --harmony --es_staging ./build/dist_es6/index.mjs",
-    "esnext": "node --harmony --es_staging --future ./build_esnext/dist/index.js",
-
+    "es2015": "node --experimental-modules ./build/dist_es2015/index.mjs",
     "clean": "rimraf build",
-    "build": "npm run clean && tsc -p tsconfig.es5.json && tsc -p tsconfig.es6.json  && tsc -p tsconfig.esnext.json"
+    "buildEs2015": "tsc -p tsconfig.es2015.json && npm run renameJs",
+    "renameJs": "rname -r \"^(?<filename>.*)$\" --noindex ./build/dist_es2015/**/*.js \"{{filename}}.mjs\"",
+    "build": "npm run clean && tsc -p tsconfig.es5.json && npm run buildEs2015"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^8.0.34",
+    "rename-cli": "^4.0.1",
     "rimraf": "^2.6.2",
     "typescript": "^2.5.3"
   }
