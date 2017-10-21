@@ -1,0 +1,24 @@
+{
+  "name": "understanding-ts-node",
+  "version": "1.0.0",
+  "description": "coin coin",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf build",
+  },
+  "author": "TeBeCo",
+  "license": "ask me about it",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tebeco/KoanNodeTsWebpack/"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.34",
+    "npm-run-all": "^4.1.1",
+    "rename-cli": "^4.0.1",
+    "rimraf": "^2.6.2",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.5.3"
+  },
+  "dependencies": {}
+}
