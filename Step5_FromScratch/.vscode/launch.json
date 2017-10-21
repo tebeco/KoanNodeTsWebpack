@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "es5",
+            "program": "c:\\Workspace\\GitHub\\TeBeCo\\HowToNode\\Step5_FromScratch\\build\\dist_es5\\index.js",
+            "outFiles": [
+                "${workspaceFolder}/build/dist_es5/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "es2015",
+            "args": [
+                "--experimental-modules",
+                "build\\dist_es2015\\index.mjs"
+            ],
+            // "program": "c:\\Workspace\\GitHub\\TeBeCo\\HowToNode\\Step5_FromScratch\\build\\dist_es2015\\index.mjs",
+            "outFiles": [
+                "${workspaceFolder}/build/dist_es2015/**/*.mjs"
+            ]
+        }
+    ]
+}
