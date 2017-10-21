@@ -1,3 +1,9 @@
-export function notDead() {
-    console.log('here is some code');
+export interface IQuack {
+    please(): string;
+}
+
+export function ducker() : IQuack {
+    return {
+        please: () => "QuackQuack QuackQuackQuack !!"
+    }
 }

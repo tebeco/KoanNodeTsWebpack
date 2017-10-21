@@ -1,3 +1,4 @@
-import { notDead } from './deadcode';
+import { ducker } from './deadcode';
 
-notDead();
+const duckMe = ducker();
+console.log(duckMe.please());

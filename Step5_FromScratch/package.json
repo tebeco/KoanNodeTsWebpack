@@ -1,18 +1,25 @@
 {
   "name": "understanding-typescript",
   "version": "1.0.0",
-  "description": "",
+  "description": "coin coin",
   "main": "index.js",
   "scripts": {
     "es5": "node ./build/dist_es5/index.js",
     "es2015": "node --experimental-modules ./build/dist_es2015/index.mjs",
-    "clean": "rimraf build",
-    "buildEs2015": "tsc -p tsconfig.es2015.json && npm run renameJs",
+    "cleanEs5": "   rimraf build/dist_es5",
+    "cleanEs2015": "rimraf build/dist_es2015",
     "renameJs": "rname -r \"^(?<filename>.*)$\" --noindex ./build/dist_es2015/**/*.js \"{{filename}}.mjs\"",
-    "build": "npm run clean && tsc -p tsconfig.es5.json && npm run buildEs2015"
+    "buildEs5": "   npm run cleanEs5    && tsc -p tsconfig.es5.json",
+    "buildEs2015": "npm run cleanEs2015 && tsc -p tsconfig.es2015.json && npm run renameJs",
+    "build": "npm run buildEs5 && npm run buildEs2015",
+    "start": "npm run es5 && npm run es2015"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "TeBeCo",
+  "license": "ask me about it",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tebeco/KoanNodeTsWebpack/"
+  },
   "devDependencies": {
     "@types/node": "^8.0.34",
     "rename-cli": "^4.0.1",
