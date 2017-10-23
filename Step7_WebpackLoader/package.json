@@ -1,0 +1,28 @@
+{
+  "name": "understanding-typescript",
+  "version": "1.0.0",
+  "description": "coin coin",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc -p tsconfig.noEmit.json",
+    "clean": "rimraf build",
+    "build": "npm-run-all clean webpack",
+    "webpack": "webpack --config config/webpack-config.ts"
+  },
+  "author": "TeBeCo",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tebeco/KoanNodeTsWebpack/"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.34",
+    "@types/webpack": "^3.0.13",
+    "npm-run-all": "^4.1.1",
+    "rimraf": "^2.6.2",
+    "ts-loader": "^3.0.5",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.5.3",
+    "webpack": "^3.8.1"
+  }
+}
