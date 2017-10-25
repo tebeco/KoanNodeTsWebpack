@@ -7,7 +7,7 @@
     "tsc": "tsc -p tsconfig.noEmit.json",
     "clean": "rimraf build",
     "build": "npm-run-all clean webpack",
-    "webpack": "webpack --config config/webpack-config.html.ts"
+    "webpack": "webpack --config config/webpack-config.define.ts"
   },
   "author": "TeBeCo",
   "license": "MIT",

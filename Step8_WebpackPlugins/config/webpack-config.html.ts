@@ -5,8 +5,8 @@
 
 import { resolve } from 'path';
 import { Configuration } from 'webpack';
-import * as HtmlWebpackPlugin from 'html-webpack-plugin'
-import * as configuration from '../configuration'
+// import * as HtmlWebpackPlugin from 'html-webpack-plugin'
+// import * as configuration from '../configuration'
 
 const PATHS = {
   src: resolve(__dirname, '..', 'src'),
@@ -40,18 +40,18 @@ const config: Configuration = {
     ]
   },
   plugins: [
-    //Step 1.5
+    //Step 1
     // new HtmlWebpackPlugin()
     //
     //Step 1.5
     // new HtmlWebpackPlugin({ title: "Coin", filename: "duck.html" })
     //
     //Step2
-    new HtmlWebpackPlugin(
-      {
-        template: resolve(PATHS.src, FILES.indexTemplate),
-        nameInPluginCtor: JSON.stringify(configuration)
-      })
+    // new HtmlWebpackPlugin(
+    //   {
+    //     template: resolve(PATHS.src, FILES.indexTemplate),
+    //     nameInPluginCtor: JSON.stringify(configuration)
+    //   })
   ]
 }
 
